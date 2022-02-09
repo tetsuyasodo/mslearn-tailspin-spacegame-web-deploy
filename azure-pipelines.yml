@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: myselfhosted
 
 steps:
 - script: echo Hello, world!
@@ -18,11 +17,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: SSH@0
-  inputs:
-    sshEndpoint: 'ssh-testvm01'
-    runOptions: 'commands'
-    commands: |
-      /usr/sbin/ip -4 a
-      whoami
-    readyTimeout: '20000'
+- script: /usr/bin/hostname
+
+- script: /usr/sbin/ip -4 a
+
+
