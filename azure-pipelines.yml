@@ -6,7 +6,7 @@
 trigger:
 - main
 
-pool: myselfhosted
+pool: mytestselfhosted
 
 steps:
 - script: echo Hello, world!
