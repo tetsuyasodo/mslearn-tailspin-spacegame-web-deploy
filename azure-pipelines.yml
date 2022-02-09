@@ -17,3 +17,12 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'ssh-testvm01'
+    runOptions: 'commands'
+    commands: |
+      /usr/sbin/ip -4 a
+      whoami
+    readyTimeout: '20000'
