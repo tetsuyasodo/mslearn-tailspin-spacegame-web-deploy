@@ -22,3 +22,6 @@ steps:
 - script: /usr/sbin/ip -4 a
 
 
+- script: |
+    echo Downloaded $(env.secureFilePath)
+    mv $(env.secureFilePath) $(System.DefaultWorkingDirectory)
