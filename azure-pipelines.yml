@@ -25,6 +25,8 @@ steps:
 
 - powershell: Write-Host "hello world"
 
+- bash: which pwsh
+- bash: pwsh -v
 #- script: |
 #    echo Downloaded $(env.secureFilePath)
 #    mv $(env.secureFilePath) $(System.DefaultWorkingDirectory)
