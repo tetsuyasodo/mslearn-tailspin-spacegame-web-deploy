@@ -22,9 +22,8 @@ steps:
 - script: /usr/bin/hostname
 
 - script: /usr/sbin/ip -4 a
-- task: PowerShell@2
-  inputs:
-    script: Write-Host "Hello World"
+
+- powershell: Write-Host "hello world"
 
 #- script: |
 #    echo Downloaded $(env.secureFilePath)
