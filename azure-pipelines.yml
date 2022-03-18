@@ -13,10 +13,11 @@ pool: selfhosted02
 steps:
 #- powershell: Write-Host "hello world"
 
-- bash: which pwsh
+#- bash: which pwsh
 
-- bash: pwsh -v
+#- bash: pwsh -v
 
+- bash: echo "hello world"
 
 #- script: |
 #    echo Downloaded $(env.secureFilePath)
