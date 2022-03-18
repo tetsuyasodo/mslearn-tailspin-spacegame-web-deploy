@@ -11,7 +11,7 @@ pool: selfhosted02
 #  vmImage: 'ubuntu-latest'
 
 steps:
-- powershell: Write-Host "hello world"
+#- powershell: Write-Host "hello world"
 
 - bash: which pwsh
 
