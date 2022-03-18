@@ -6,9 +6,9 @@
 trigger:
 - main
 
-#pool: mytestselfhosted
-pool:
-  vmImage: 'ubuntu-latest'
+pool: selfhosted02
+#pool:
+#  vmImage: 'ubuntu-latest'
 
 steps:
 - powershell: Write-Host "hello world"
@@ -16,6 +16,7 @@ steps:
 - bash: which pwsh
 
 - bash: pwsh -v
+
 
 #- script: |
 #    echo Downloaded $(env.secureFilePath)
