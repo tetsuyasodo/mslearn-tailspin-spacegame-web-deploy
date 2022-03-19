@@ -20,6 +20,13 @@ steps:
 - bash: echo "hello world"
 - task: SSH@0
   inputs:
+    sshEndpoint: 'self-target'
+    runOptions: 'commands'
+    commands: 'hostname'
+    readyTimeout: '20000'
+
+- task: SSH@0
+  inputs:
     sshEndpoint: 'win-target'
     runOptions: 'commands'
     commands: 'hostname'
