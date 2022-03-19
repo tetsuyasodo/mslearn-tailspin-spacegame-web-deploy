@@ -18,12 +18,14 @@ steps:
 #- bash: pwsh -v
 
 - bash: echo "hello world"
+
 - task: InstallSSHKey@0
   inputs:
     knownHostsEntry: 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=='
     sshPublicKey: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJYkYwU4Di7mM/FAfMSfIAUDga2ZmD+U2KbsTUiFuRhGml3enl8as6F3E5reQ3VudgSeQjPGKU9egC5TjhrPZYzEU5/z8guewGRSgcPqTPj2su1XOa6FXmfyDbhQjGXetTBwU6DKAN3cnVXkcdo4MEkN7Zj71pEs54MomlFa/Z/aTOjFq/BFvRgEPvAHrpmsjGZ18Wn2ysF1GOZUGgBs6p8aQ37xlUoOVvyGdbzRqITmZ1ycPL5kwkcQ+aQUQI2DDOl5q30FZs+z9sg2ohGIbrIGDgugIiqlogazXWEUAVQrwzBiumR35I45bPPkFtbhNRalU8rg2Cvu/P4lGv08X7 sodo@agent01'
     sshKeySecureFile: 'id_rsa'
-continueOnError: 
+
+
 - task: SSH@0
   inputs:
     sshEndpoint: 'self-target'
