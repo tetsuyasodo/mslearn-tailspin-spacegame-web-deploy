@@ -30,7 +30,9 @@ steps:
     sshEndpoint: 'win-target'
     runOptions: 'commands'
     commands: 'hostname'
+    failOnStdErr: false
     readyTimeout: '20000'
+
 #- script: |
 #    echo Downloaded $(env.secureFilePath)
 #    mv $(env.secureFilePath) $(System.DefaultWorkingDirectory)
