@@ -18,7 +18,12 @@ steps:
 #- bash: pwsh -v
 
 - bash: echo "hello world"
-
+- task: SSH@0
+  inputs:
+    sshEndpoint: 'win-target'
+    runOptions: 'commands'
+    commands: 'hostname'
+    readyTimeout: '20000'
 #- script: |
 #    echo Downloaded $(env.secureFilePath)
 #    mv $(env.secureFilePath) $(System.DefaultWorkingDirectory)
